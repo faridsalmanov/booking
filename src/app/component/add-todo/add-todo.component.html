@@ -1,6 +1,6 @@
 <h1>Add Todo</h1>
-
-<table>
+<form (ngSubmit)="onSaveTodo">
+<table class="table">
 
 
 
@@ -8,23 +8,23 @@
         <tr>
             
             <td>Task: </td>
-            <td><input [(ngModel)]="todo.task" /></td>
+            <td><input [(ngModel)]="todo.task" name="task" required/></td>
         </tr>
         
         <tr>
             <td>Day: </td>
-            <td><input type="number" [(ngModel)]="todo.day" /></td>
+            <td><input type="number" [(ngModel)]="todo.day" name="day"/></td>
         </tr>
         
         <tr>
             <td>Register: </td>
-            <td><input type="date" [(ngModel)]="todo.register" /></td>
+            <td><input type="date" [(ngModel)]="todo.register" name="register"/></td>
         </tr>
         
         <tr>
             <td>Category: </td>
             <td>
-                <select [(ngModel)]="todo.category.id">
+                <select [(ngModel)]="todo.category.id" name="category">
                     <option value="1" *ngFor="let c of categories" [value]="c.id">{{c.name}}</option>
                    
 
@@ -33,7 +33,7 @@
         </tr>
         
         <tr>
-            <td><button class="btn btn-success" (click)="onSaveTodo">Save</button></td>
+            <td><button class="btn btn-success" type="submit">Save</button></td>
         </tr>
         
 
@@ -41,3 +41,4 @@
 
 
 </table>
+</form>
