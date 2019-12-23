@@ -1,0 +1,28 @@
+<input type="text" [(ngModel)]="name" />
+
+<button (click)="onSaveStudent()" class="btn btn-success">{{saveButtonText}}</button>
+<input type="text" placeholder="search here" [(ngModel)]="searchText" (input)="onSearch()" />
+<hr>
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ad</th>
+            <th>Əməliyyatlar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of studentsCopy;let counter=index;">
+            <td> {{s}} </td>
+        <td>
+ <button (click)="onStudentUpdate(counter)" class="btn btn-primary">update</button>
+<button (click)="onStudentDelete(counter)" class="btn btn-danger">delete</button>
+        </td> 
+        </tr>
+
+    </tbody>
+
+</table>

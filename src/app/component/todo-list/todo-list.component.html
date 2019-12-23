@@ -1,0 +1,37 @@
+<button (click)="onAddTodo()" class="btn btn-primary">Add Todo</button>
+<hr>
+<!-- <table class="table">
+<thead>
+<tr> <th>Id</th> <th>Task</th> <th>Day</th> </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let t of todos">
+       <td>{{t.id}}</td> 
+       <td>{{t.task}}</td>
+       <td>{{t.day}}</td>
+
+    </tr>
+</tbody>
+</table> -->
+<hr>
+
+<button (click)="loadRows()">Siyahını yenilə</button>
+
+<input placeholder="Axtarış" [(ngModel)]="searchText" type="text" (keyup)="quickSearch()"/>
+<hr>
+
+<ag-grid-angular
+   #agGrid
+   style="width: 100%;
+height: 500px;"
+   class="ag-theme-balham"
+   [rowData]="todos"
+   [columnDefs]="columnDefs"
+   pagination="true"
+   rowSelection="multiple"
+   [animateRows]="true"
+   (gridReady)="onGridReady($event)"  
+[floatingFilter]="true"
+[enableColResize]="true"
+   >
+</ag-grid-angular>

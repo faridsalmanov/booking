@@ -1,0 +1,28 @@
+
+<hr>
+<button (click)="fillArray()">Fill Array</button>
+<hr>
+<ol>
+    <li *ngFor="let n of numbers">{{n}}</li>
+
+</ol>
+
+
+<table>
+<thead>
+    <tr><th>ID</th> <th>Task </th> <th>Day</th>  </tr>
+</thead>
+<tbody>
+<tr *ngFor="let t of tasks"> <td>{{t.id}}</td> <td>{{t.task}}</td> <td>{{t.day}}</td> 
+
+</tr>
+</tbody>
+</table>
+<hr>
+<button [disabled]="!allowButtonClick">Some Button</button>
+<hr>
+
+
+<hr>
+<img [src]="imageURL"  style="max-width: 400px;" /> 
+<button (click)="onNextImage()">Next image</button>
