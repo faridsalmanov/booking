@@ -17,8 +17,9 @@ public class Product {
 	private Integer id;
 	private String name;
 	private Double price;
-	private Integer userId;
+	private String username;
 	private String image;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -37,11 +38,11 @@ public class Product {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-	public Integer getUserId() {
-		return userId;
+	public String getUsername() {
+		return username;
 	}
-	public void setUserId(Integer userId) {
-		this.userId = userId;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public String getImage() {
 		return image;

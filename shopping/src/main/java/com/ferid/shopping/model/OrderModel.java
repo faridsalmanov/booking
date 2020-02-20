@@ -1,4 +1,4 @@
-package com.ferid.shopping.model;
+ package com.ferid.shopping.model;
 
 import java.util.List;
 
