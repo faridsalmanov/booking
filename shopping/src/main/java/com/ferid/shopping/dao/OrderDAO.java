@@ -1,9 +1,14 @@
 package com.ferid.shopping.dao;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import com.ferid.shopping.model.OrderModel;
+import com.ferid.shopping.model.Product;
+
+
+
 
 public interface OrderDAO extends JpaRepository<OrderModel, Integer>{
-
+	public List<Product> findAllByUsername(String username);
 }

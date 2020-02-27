@@ -26,7 +26,7 @@ public class OrderModel {
 	private Integer id;
 	private String note;
 	private Double price;
-	private Integer userId;
+	private String userId;
 	
 	@ManyToOne(cascade={CascadeType.PERSIST})
 	private Customer customer;
