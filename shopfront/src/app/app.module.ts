@@ -6,10 +6,30 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule, MatDialogModule, MatProgressSpinnerModule, MatButtonModule} from '@angular/material';
 import { FormsModule} from '@angular/forms';
-import { ConfirmationPopover Module } from 'angular-confirmation-popover';
+import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
+import { LoginComponent } from './component/login/login.component';
+import { LogoutComponent } from './component/logout/logout.component';
+import { SignupComponent } from './component/signup/signup.component';
+import { ProductsComponent } from './component/products/products.component';
+import { AddProductComponent } from './component/add-product/add-product.component';
+import { CustomerPageComponent } from './component/customer-page/customer-page.component';
+import { OrdersComponent } from './component/orders/orders.component';
+import { BasketComponent } from './component/basket/basket.component';
+import { OrderConfirmationComponent } from './component/order-confirmation/order-confirmation.component';
+import { MenuComponent } from './component/menu/menu.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    LogoutComponent,
+    SignupComponent,
+    ProductsComponent,
+    AddProductComponent,
+    CustomerPageComponent,
+    OrdersComponent,
+    BasketComponent,
+    OrderConfirmationComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
