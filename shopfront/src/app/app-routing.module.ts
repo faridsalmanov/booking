@@ -7,11 +7,13 @@ import { AddProductComponent } from './component/add-product/add-product.compone
 import { CustomerPageComponent } from './component/customer-page/customer-page.component';
 import { OrdersComponent } from './component/orders/orders.component';
 import { OrderConfirmationComponent } from './component/order-confirmation/order-confirmation.component';
+import { SignupComponent } from './component/signup/signup.component';
 
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'login',component:LoginComponent},
+  {path:'signup',component:SignupComponent},
   {path:'logout',component:LogoutComponent},
   {path:'products',component:ProductsComponent},
   {path:'add-products',component:AddProductComponent},
