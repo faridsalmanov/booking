@@ -1,1 +1,19 @@
-<p>signup works!</p>
+
+
+<div class="container">
+    
+    <form (ngSubmit)="!signupForm && onSignup()" #signupForm="ngForm">
+
+      <div class="form-group">
+        <label for="username">Istifadeci adi:</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" required minlength="2" maxlength="20">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Sifre:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password"required minlength="2" maxlength="20">
+      </div>
+     
+      <button type="submit" class="btn btn-primary">Qeydiyyatdan kec</button>
+    </form>
+  </div>
+  
