@@ -17,6 +17,11 @@ import { OrdersComponent } from './component/orders/orders.component';
 import { BasketComponent } from './component/basket/basket.component';
 import { OrderConfirmationComponent } from './component/order-confirmation/order-confirmation.component';
 import { MenuComponent } from './component/menu/menu.component';
+import {HttpClientModule} from '@angular/common/http';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +48,9 @@ import { MenuComponent } from './component/menu/menu.component';
     ConfirmationPopoverModule.forRoot({
       confirmButtonType:'succes',cancelButtonType:'danger',
       confirmText:'Tesdiq',cancelText:'Legv'
-    })
+    }),
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],
