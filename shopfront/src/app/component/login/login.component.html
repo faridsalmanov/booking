@@ -1,1 +1,44 @@
-<p>login works!</p>
+<div id="main">
+<table id="main_table" class="table table-bordered">
+<tbody>
+
+<tr>
+    <td>
+        Istifadeci adi:
+    </td>
+    <td>
+        <input class="form-control" type="text" [(ngModel)]="user.username" />
+
+
+    </td>
+</tr>
+
+<tr>
+    <td>
+     Sifre:
+    </td>
+    <td>
+        <input class="form-control" type="password" [(ngModel)]="user.password" />
+
+
+    </td>
+</tr>
+
+
+<tr>
+    <td>
+     <button class="btn btn-primary">Hesab yarat</button>
+    
+    </td>
+    <td>
+        <button class="btn btn-succes">Giris</button>
+
+    </td>
+</tr>
+
+
+</tbody>
+</table>
+
+</div>
+
