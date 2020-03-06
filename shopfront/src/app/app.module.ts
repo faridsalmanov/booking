@@ -54,6 +54,6 @@ import {HttpClientModule} from '@angular/common/http';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents:[ ]
+  entryComponents:[ SignupComponent]
 })
 export class AppModule { }
