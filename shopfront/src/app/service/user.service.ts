@@ -13,6 +13,8 @@ username:string='';
 createAccount(user:User){
   return this.httpClient.post(`${API_URL}/users`,user);
 }
-
+checkUser(user:User){
+  return this.httpClient.post<boolean>(`${API_URL}/users/check`,user);
+}
 
 }
