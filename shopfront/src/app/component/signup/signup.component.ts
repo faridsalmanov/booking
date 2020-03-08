@@ -14,9 +14,29 @@ user:User=new User();
   ngOnInit(): void {
   }
     onSignup(){
+      this.userService.checkUser(this.user).subscribe(
+        resp=>{
+     if(resp){
+       alert('bu istifadeci adi artiq var');
+     }else{
       this.userService.createAccount(this.user).subscribe(
+        resp=>{
+          alert('success operation');
+        },error=>{
+           alert('error operation');
+  
+        }
+    );
 
-      
+     }
+        },error=>{
+           alert('user check error');
+  
+        }
+
+        
+      );
+      this.userService.createAccount(this.user).subscribe(
       resp=>{
         alert('success operation');
       },error=>{
@@ -27,4 +47,4 @@ user:User=new User();
       );
     }
   }
-  
+
