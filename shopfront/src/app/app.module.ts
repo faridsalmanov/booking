@@ -17,7 +17,8 @@ import { OrdersComponent } from './component/orders/orders.component';
 import { BasketComponent } from './component/basket/basket.component';
 import { OrderConfirmationComponent } from './component/order-confirmation/order-confirmation.component';
 import { MenuComponent } from './component/menu/menu.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { HttpInterceptorService } from './service/http-interceptor.service';
 
 
 
@@ -52,7 +53,12 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [
+{
+  provide:HTTP_INTERCEPTORS,useClass:HttpInterceptorService,multi:true
+}
+
+  ],
   bootstrap: [AppComponent],
   entryComponents:[ SignupComponent]
 })

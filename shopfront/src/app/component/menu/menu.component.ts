@@ -8,13 +8,13 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private userService:UserService) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
   }
-isUserLoggedIn(){
+  isUserLoggedIn() {
 
-return this.userService.token!='';
+    return this.userService.token != '';
 
-}
+  }
 }

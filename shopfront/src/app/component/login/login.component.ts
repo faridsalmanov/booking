@@ -11,25 +11,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
- user:User=new User();
-  constructor(private matDialog:MatDialog,private userS:UserService,private router:Router) { }
+  user: User = new User();
+  constructor(private matDialog: MatDialog, private userS: UserService, private router: Router) { }
 
   ngOnInit(): void {
   }
-onCreateAccount(){
-this.matDialog.open(SignupComponent);
-}
-onLogin(){
-  this.userS.validate(this.user).subscribe(
-reps=>{
-this.userS.token='Basic'+window.btoa(this.user.username+':'+this.user.password);
-this.router.navigate(['products']);
-},error=>{
-  this.userS.token='';
-  alert('login error, invalid credentials');
-}
+  onCreateAccount() {
+    this.matDialog.open(SignupComponent);
+  }
+  onLogin() {
+    this.userS.validate(this.user).subscribe(
+      reps => {
+        this.userS.token = 'Basic' + window.btoa(this.user.username + ':' + this.user.password);
+        this.router.navigate(['products']);
+      }, error => {
+        this.userS.token = '';
+        alert('login error, invalid credentials');
+      }
 
 
-  );
-}
+    );
+  }
 }

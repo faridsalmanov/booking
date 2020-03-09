@@ -8,18 +8,19 @@ import { CustomerPageComponent } from './component/customer-page/customer-page.c
 import { OrdersComponent } from './component/orders/orders.component';
 import { OrderConfirmationComponent } from './component/order-confirmation/order-confirmation.component';
 import { SignupComponent } from './component/signup/signup.component';
+import { RouteGuardService } from './service/route-guard.service';
 
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'login',component:LoginComponent},
-  {path:'signup',component:SignupComponent},
-  {path:'logout',component:LogoutComponent},
-  {path:'products',component:ProductsComponent},
-  {path:'add-products',component:AddProductComponent},
+  {path:'signup',component:SignupComponent,canActivate:[RouteGuardService]},
+  {path:'logout',component:LogoutComponent,canActivate:[RouteGuardService]},
+  {path:'products',component:ProductsComponent,canActivate:[RouteGuardService]},
+  {path:'add-products',component:AddProductComponent,canActivate:[RouteGuardService]},
   {path:'customer-page',component:CustomerPageComponent},
-  {path:'orders',component:OrdersComponent},
-  {path:'order-confirm',component:OrderConfirmationComponent},
+  {path:'orders',component:OrdersComponent,canActivate:[RouteGuardService]},
+  {path:'order-confirm',component:OrderConfirmationComponent,canActivate:[RouteGuardService]},
   {path:'**',component:LoginComponent}
 ];
 
