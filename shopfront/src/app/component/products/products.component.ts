@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AddProductComponent } from '../add-product/add-product.component';
 
 @Component({
   selector: 'app-products',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private matD:MatDialog) { }
 
   ngOnInit(): void {
   }
-
+onAddProduct(){
+this.matD.open(AddProductComponent);
+}
 }

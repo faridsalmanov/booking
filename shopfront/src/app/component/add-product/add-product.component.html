@@ -1,1 +1,16 @@
-<p>add-product works!</p>
+
+<div class="container">
+    <h2 class="text-succes">{{header}}</h2>
+
+    <form (ngSubmit)="!productForm.invalid && onSaveProduct()" #productForm="ngForm">
+      <div class="form-group">
+        <label for="name">Ad:</label>
+        <input type="text" class="form-control" id="name" #productName="ngModel" name="name"
+        [(ngModel)]="product.name" required/>
+       
+        <div *ngIf="productName.invalid" class="invalid-feedback"> Adi yazin</div>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Yadda saxla</button>
+    </form>
+  </div>

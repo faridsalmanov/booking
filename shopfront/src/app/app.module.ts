@@ -60,6 +60,6 @@ import { HttpInterceptorService } from './service/http-interceptor.service';
 
   ],
   bootstrap: [AppComponent],
-  entryComponents:[ SignupComponent]
+  entryComponents:[ SignupComponent,AddProductComponent]
 })
 export class AppModule { }
