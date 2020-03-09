@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../model/model';
 import { API_URL } from '../constans';
 
@@ -8,6 +8,9 @@ import { API_URL } from '../constans';
 })
 export class UserService {
 username:string='';
+token:string='';
+
+
   constructor(private httpClient:HttpClient) { }
 
 createAccount(user:User){
@@ -16,5 +19,25 @@ createAccount(user:User){
 checkUser(user:User){
   return this.httpClient.post<boolean>(`${API_URL}/users/check`,user);
 }
+
+validate(user:User){
+let headers=new HttpHeaders(
+{
+
+  Authorization:'Basic '+window .btoa(user.username+':'+user.password)
+}
+);
+
+  return this.httpClient.post<boolean>(`${API_URL}/users/validate`,user,{
+headers:headers
+
+  });
+
+  
+}
+
+
+
+
 
 }

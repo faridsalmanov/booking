@@ -14,7 +14,7 @@ export class MenuComponent implements OnInit {
   }
 isUserLoggedIn(){
 
-return this.userService.username!='';
+return this.userService.token!='';
 
 }
 }
