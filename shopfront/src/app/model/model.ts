@@ -36,3 +36,7 @@ export class OrderProduct {
     public product:Product;
     public count:number;
 }
+ export class ImageBean{
+     public id:number;
+     public image:string;
+ }

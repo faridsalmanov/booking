@@ -7,10 +7,24 @@
         <label for="name">Ad:</label>
         <input type="text" class="form-control" id="name" #productName="ngModel" name="name"
         [(ngModel)]="product.name" required/>
-       
-        <div *ngIf="productName.invalid" class="invalid-feedback"> Adi yazin</div>
+        <div *ngIf="productName.invalid" > Adi yazin</div>
       </div>
       
+      <div class="form-group">
+        <label for="name">Qiymet:</label>
+        <input type="number" class="form-control" id="price" 
+        #productPrice="ngModel" name="price"
+        [(ngModel)]="product.price" required/>
+        <div *ngIf="productPrice.invalid" > Qiymet yazin</div>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Sekil:</label>
+        <input type="file" class="form-control" id="image" 
+      name="image" required (change)="onImageSelected($event)"/>
+    
+      </div>
+
       <button type="submit" class="btn btn-primary">Yadda saxla</button>
     </form>
   </div>
