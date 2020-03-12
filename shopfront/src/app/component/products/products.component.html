@@ -1,1 +1,47 @@
 <button (click)="onAddProduct()" class="btn btn-primary">Yeni</button>
+<hr>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+        </tr>
+        <tr>
+            <th>
+                Ad
+            </th>
+            <th>
+                Qiymet
+            </th>
+
+            <th>
+                Sekil
+            </th>
+
+
+            <th>
+                Emeliyyatlar
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products">
+            <td>
+                {{p.id}}
+            </td>
+            <td>
+                {{p.name}}
+            </td>
+            <td>
+                {{p.price | currency:'USD'}}
+            </td>
+<td>
+    <img [src]="download+p.image" class="product-image" />
+</td>
+<td>
+    <button class="btn btn-danger">Sil</button><button class="btn btn-primary">Redakte</button>
+</td>
+        </tr>
+    </tbody>
+</table>

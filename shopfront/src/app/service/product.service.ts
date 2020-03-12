@@ -12,4 +12,7 @@ export class ProductService {
   save(p:Product){
     return this.http.post(`${API_URL}/products`,p)
   }
+  findByUsername(username:string){
+    return this.http.get<Product[]>(`${API_URL}/products/find-all/${username}`);
+  }
 }
