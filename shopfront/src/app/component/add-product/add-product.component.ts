@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/model';
 import { UploadService } from 'src/app/service/upload.service';
 import { ProductService } from 'src/app/service/product.service';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-add-product',
@@ -10,7 +11,7 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class AddProductComponent implements OnInit {
 product:Product=new Product();
-  constructor(private uploadService:UploadService,private productService:ProductService) { }
+  constructor(private uploadService:UploadService,private productService:ProductService,private userService:UserService) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +20,7 @@ onSaveProduct(){
   this.uploadService.upload(this.image).subscribe(
 resp=>{
   this.product.image=resp.image;
+  this.product.username=this.userService.username;
  this.productService.save(this.product).subscribe(
 resp=>{
   alert('ugurlu qeydiyyat');

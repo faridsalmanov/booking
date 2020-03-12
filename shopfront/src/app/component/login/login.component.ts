@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   onLogin() {
     this.userS.validate(this.user).subscribe(
       reps => {
+        this.userS.username=this.user.username;
         this.userS.token = 'Basic' + window.btoa(this.user.username + ':' + this.user.password);
         this.router.navigate(['products']);
       }, error => {
