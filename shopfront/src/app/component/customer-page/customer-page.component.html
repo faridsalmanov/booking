@@ -1,1 +1,23 @@
-<p>customer-page works!</p>
+<div class="main-container">
+
+    <div *ngFor="let p of products" class="product-template">
+
+        <div class="product">
+  <img [src]="download+p.image" class="product-image"/>
+<span>{{p.name}}</span>
+<span>{{p.price | currency:'USD'}}</span>
+<button class="btn btn-primary">
+    Sebete
+</button>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+</div>

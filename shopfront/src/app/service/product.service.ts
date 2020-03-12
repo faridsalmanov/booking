@@ -15,4 +15,11 @@ export class ProductService {
   findByUsername(username:string){
     return this.http.get<Product[]>(`${API_URL}/products/find-all/${username}`);
   }
+
+  findAll(){
+    return this.http.get<Product[]>(`${API_URL}/products/find-all/${""}`);
+  }
+
+
+
 }
