@@ -18,6 +18,7 @@ download: string;
 begin:number=0;
 length:number=10;
 search:string='';
+productCount:number=0;
   constructor(private productService:ProductService,private bS:BasketService,private mD:MatDialog) { }
 
   ngOnInit(){
@@ -30,6 +31,12 @@ search:string='';
 resp=>{
   this.products=resp;
 }
+
+    );
+    this.bS.productCountChanged.subscribe(
+ resp=>{
+   this.productCount=resp;
+ }
 
     );
   }
@@ -54,6 +61,13 @@ oP.product=p;
 oP.count=1;
 
 this.bS.orderProducts.push(oP);
+let productCount:number=0;
+
+for (let index = 0; index < this.bS.orderProducts.length;index++){
+  const e = this.bS.orderProducts[index];
+  productCount+=e.count;
+}
+this.bS.productCountChanged.emit(productCount);
 }
 
 onOpenBasket(){
