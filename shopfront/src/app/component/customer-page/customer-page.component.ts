@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/service/product.service';
-import { Product, SearchModel } from 'src/app/model/model';
+import { Product, SearchModel, OrderProduct } from 'src/app/model/model';
 import { API_URL } from 'src/app/constans';
 import { serialize } from 'v8';
+import { BasketService } from 'src/app/service/basket.service';
+import { BasketComponent } from '../basket/basket.component';
 
 @Component({
   selector: 'app-customer-page',
@@ -16,7 +18,7 @@ download: string;
 begin:number=0;
 length:number=10;
 search:string='';
-  constructor(private productService:ProductService) { }
+  constructor(private productService:ProductService,private bS:BasketService,private mD:MatDialog) { }
 
   ngOnInit(){
     this.download=API_URL+'/filedownload/files/';
@@ -45,4 +47,18 @@ onScroll(){
     
         );
 }
+
+onToBasket(p:Product){
+  let oP:OrderProduct= new OrderProduct();
+oP.product=p;
+oP.count=1;
+
+this.bS.orderProducts.push(oP);
+}
+
+onOpenBasket(){
+this.mD.open(BasketComponent);
+}
+
+
 }

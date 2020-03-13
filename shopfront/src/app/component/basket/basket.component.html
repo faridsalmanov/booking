@@ -1,1 +1,48 @@
-<p>basket works!</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Sekil
+            </th>
+            <th>
+                Ad
+            </th>
+            <th>
+                Qiymet
+            </th>
+            <th>
+                Miqdar
+            </th>
+            <th>
+                Cem
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let oP of bS.orderProducts">
+            <td>
+                <img class="product-image" [src]="download+oP.product.image" />
+            </td>
+            <td>
+                {{oP.product.name}}
+            </td>
+            <td>
+                {{oP.product.price}}
+            </td>
+            <td>
+                {{oP.count}}
+            </td>
+            <td>
+                {{ (oP.product.price*oP.count) | currency:'USD' }}
+            </td>
+            <td>
+            <button class="btn btn-danger">
+                X
+            </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

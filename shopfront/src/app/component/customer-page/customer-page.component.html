@@ -6,7 +6,7 @@
   <img [src]="download+p.image" class="product-image"/>
 <span>{{p.name}}</span>
 <span>{{p.price | currency:'USD'}}</span>
-<button class="btn btn-primary">
+<button class="btn btn-primary" (click)="onToBasket(p)">
     Sebete
 </button>
 
@@ -29,3 +29,6 @@ infiniteScroll
 (scrolled)="onScroll()"
 >
 </div>
+<button (click)="onOpenBasket()" class="btn btn-primary basket-button">
+sebet
+</button>

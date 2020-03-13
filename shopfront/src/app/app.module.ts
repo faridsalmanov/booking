@@ -61,6 +61,6 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
   ],
   bootstrap: [AppComponent],
-  entryComponents:[ SignupComponent,AddProductComponent]
+  entryComponents:[ SignupComponent,AddProductComponent,BasketComponent]
 })
 export class AppModule { }
