@@ -25,6 +25,9 @@ import javax.sql.DataSource;
 	                .antMatchers("/filedownload/**").permitAll()
 	                .antMatchers(HttpMethod.POST,"/users").permitAll()
 	                .antMatchers(HttpMethod.POST,"/users/check").permitAll()
+	                .antMatchers(HttpMethod.POST,"/products/find-partial").permitAll()
+	                .antMatchers(HttpMethod.POST,"/orders").permitAll()
+	                
 	                .antMatchers(HttpMethod.OPTIONS,"/**").permitAll()
 	                .anyRequest().authenticated().and().httpBasic().and()
 	                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
