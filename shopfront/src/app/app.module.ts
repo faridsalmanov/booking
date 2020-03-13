@@ -19,6 +19,7 @@ import { OrderConfirmationComponent } from './component/order-confirmation/order
 import { MenuComponent } from './component/menu/menu.component';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { HttpInterceptorService } from './service/http-interceptor.service';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 
@@ -50,8 +51,8 @@ import { HttpInterceptorService } from './service/http-interceptor.service';
       confirmButtonType:'succes',cancelButtonType:'danger',
       confirmText:'Tesdiq',cancelText:'Legv'
     }),
-    HttpClientModule
-
+    HttpClientModule,
+    InfiniteScrollModule
   ],
   providers: [
 {

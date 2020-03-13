@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Product } from '../model/model';
+import { Product, SearchModel } from '../model/model';
 import { API_URL } from '../constans';
 
 @Injectable({
@@ -20,6 +20,8 @@ export class ProductService {
     return this.http.get<Product[]>(`${API_URL}/products/find-all/${""}`);
   }
 
-
+  findPartial(sM:SearchModel){
+    return this.http.post<Product[]>(`${API_URL}/products/find-partial`,sM);
+  }
 
 }
