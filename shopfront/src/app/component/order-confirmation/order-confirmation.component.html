@@ -1,1 +1,17 @@
-<p>order-confirmation works!</p>
+<form (ngSubmit)="!orderForm.invalid && onConfirmOrder()" #orderForm="ngForm">
+    <label>Ad :</label>
+    <input type="text" [(ngModel)]="order.customer.name" name="customerName" required />
+
+    <label>Telefon :</label>
+    <input type="text" [(ngModel)]="order.customer.phone" name="customerPhone" required />
+
+    <label>Ünvan :</label>
+    <input type="text" [(ngModel)]="order.customer.adress" name="customerAdress" required />
+
+    <label>Qeyd :</label>
+    <input type="text" [(ngModel)]="order.note" name="orderNote" />
+
+
+    <button class="btn btn-primary" type="submit">Sifarişi təsdiqlə </button>
+
+</form>

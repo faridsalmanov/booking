@@ -28,7 +28,7 @@ export class OrderModel{
     public totalprice:number;
     public note:string;
     public orderProducts:OrderProduct[];
-     public customer:Customer;
+     public customer:Customer=new Customer();
 
 }
 
