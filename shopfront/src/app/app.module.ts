@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule, MatDialogModule, MatProgressSpinnerModule, MatButtonModule} from '@angular/material';
+import {  MatDialogModule } from '@angular/material/dialog';
 import { FormsModule} from '@angular/forms';
 import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
 import { LoginComponent } from './component/login/login.component';
@@ -41,10 +41,9 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatInputModule ,
+  
     MatDialogModule, 
-    MatProgressSpinnerModule, 
-    MatButtonModule,
+   
     BrowserAnimationsModule,
     FormsModule,
     ConfirmationPopoverModule.forRoot({
