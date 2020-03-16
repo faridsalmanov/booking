@@ -29,6 +29,7 @@ export class OrderModel{
     public note:string;
     public orderProducts:OrderProduct[];
      public customer:Customer=new Customer();
+     public username:string;
 
 }
 
