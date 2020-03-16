@@ -57,10 +57,27 @@ export class CustomerPageComponent implements OnInit {
   }
 
   onToBasket(p: Product) {
-    let oP: OrderProduct = new OrderProduct();
-    oP.product = p;
-    oP.count = 1;
-    this.bS.orderProducts.push(oP);
+
+let thisAlreadyInBasket:boolean=false;
+for (let index = 0; index < this.bS.orderProducts.length; index++) {
+  const e = this.bS.orderProducts[index];
+  if(e.product.id===p.id){
+    thisAlreadyInBasket=true;
+    this.bS.orderProducts[index].count++;
+    break;
+  }
+}
+
+     if(!thisAlreadyInBasket){
+      let oP: OrderProduct = new OrderProduct();
+      oP.product = p;
+      oP.count = 1;
+      this.bS.orderProducts.push(oP);
+     }
+  
+
+
+
     let productCount: number = 0;
     for (let index = 0; index < this.bS.orderProducts.length; index++) {
       const e = this.bS.orderProducts[index];
