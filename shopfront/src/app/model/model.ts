@@ -25,7 +25,7 @@ export class Product{
 
 export class OrderModel{
     public id:number;
-    public totalprice:number;
+    public price:number;
     public note:string;
     public orderProducts:OrderProduct[];
      public customer:Customer=new Customer();

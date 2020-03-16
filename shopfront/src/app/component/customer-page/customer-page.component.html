@@ -22,6 +22,11 @@
 
 </div>
 <hr>
+
+<button (click)="onOpenBasket()" class="btn btn-primary basket-button">
+səbət: <span class="badge badge-liht"> {{productCount}}  </span>
+</button>
+ 
 <div
 infiniteScroll
 [infiniteScrollDistance]="2"
@@ -29,6 +34,3 @@ infiniteScroll
 (scrolled)="onScroll()"
 >
 </div>
-<button (click)="onOpenBasket()" class="btn btn-primary basket-button">
-səbət: <span class="badge badge-liht"> {{productCount}}  </span>
-</button>

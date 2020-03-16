@@ -24,7 +24,7 @@ onConfirmOrder(){
     const e = this.bS.orderProducts[index];
     totalPrice+=e.count*e.product.price;
   }
-this.order.totalprice=totalPrice;
+this.order.price=totalPrice;
 
 
 this.orderS.saveOrder(this.order).subscribe(

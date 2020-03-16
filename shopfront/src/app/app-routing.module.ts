@@ -20,7 +20,7 @@ const routes: Routes = [
   {path:'add-products',component:AddProductComponent,canActivate:[RouteGuardService]},
   {path:'customer-page',component:CustomerPageComponent},
   {path:'orders',component:OrdersComponent,canActivate:[RouteGuardService]},
-  {path:'order-confirm',component:OrderConfirmationComponent,canActivate:[RouteGuardService]},
+  {path:'order-confirm',component:OrderConfirmationComponent,},
   {path:'**',component:LoginComponent}
 ];
 
