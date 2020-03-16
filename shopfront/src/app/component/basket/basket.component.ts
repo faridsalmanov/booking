@@ -32,5 +32,7 @@ findTotalPrice(){
     this.totalPrice+=e.count*e.product.price;
   }
 }
-
+onOrderConfirm(){
+  
+}
 }

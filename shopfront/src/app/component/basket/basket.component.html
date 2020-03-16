@@ -1,4 +1,6 @@
+<div style="max-height: 400px;min-height: 300px;overflow: auto;">
 <table class="table table-bordered">
+
     <thead>
         <tr>
             <th>
@@ -47,6 +49,8 @@
         </tr>
     </tbody>
 </table>
+</div>
 <span>
     Ümumi Qiymət : {{ totalPrice  | currency:'USD' }}
 </span>
+<button mat-dialog-close *ngIf="totalPrice!==0" (click)="ondOrderConfirm()" class="btn btn-succes">Sifarişi Bitir</button>
