@@ -16,11 +16,15 @@ import lombok.Setter;
  
 public class OrderProduct {
 
+	@Override
+	public String toString() {
+		return "OrderProduct [id=" + id + ", product=" + product + ", count=" + count + "]";
+	}
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id; 
 	
-	@OneToOne(cascade={CascadeType.PERSIST})
+	@OneToOne
 	private Product product;
 	private Integer count;
 	public Integer getId() {
