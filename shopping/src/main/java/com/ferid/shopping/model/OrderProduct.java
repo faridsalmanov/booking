@@ -16,10 +16,7 @@ import lombok.Setter;
  
 public class OrderProduct {
 
-	@Override
-	public String toString() {
-		return "OrderProduct [id=" + id + ", product=" + product + ", count=" + count + "]";
-	}
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id; 
@@ -27,24 +24,11 @@ public class OrderProduct {
 	@OneToOne
 	private Product product;
 	private Integer count;
-	public Integer getId() {
-		return id;
+	@Override
+	public String toString() {
+		return "OrderProduct [id=" + id + ", product=" + product + ", count=" + count + "]";
 	}
-	public void setId(Integer id) {
-		this.id = id;
+		
 	}
-	public Product getProduct() {
-		return product;
-	}
-	public void setProduct(Product product) {
-		this.product = product;
-	}
-	public Integer getCount() {
-		return count;
-	}
-	public void setCount(Integer count) {
-		this.count = count;
-	}
-	 
 	
-}
+
