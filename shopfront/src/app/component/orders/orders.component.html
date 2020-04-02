@@ -1,1 +1,49 @@
-<p>orders works!</p>
+<table class="table table-bordered">
+    <thead class="thead-dark"> 
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Müştəri
+            </th>
+            <th>
+                Məhsulları
+            </th>
+            <th>
+                Qeyd
+            </th>
+            <th>
+                Ümumi qiymət
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let o of orders">
+<td>
+     {{o.id}}
+</td>
+<td>
+<ul>
+    <li>Ad: {{o.customer.name}}</li>
+    <li>Ünvan: {{o.customer.adress}}</li>
+    <li>Telefon: {{o.customer.phone}}</li>
+
+</ul>
+</td>
+<td>
+    <ol>
+        <li *ngFor="let oP of o.orderProducts">
+           {{oP.product.name}} : {{oP.product.price | currency:'USD'}},{{oP.count}} ədəd
+        </li>
+    </ol>
+</td>
+<td>
+    {{o.note}}
+</td>
+<td>
+    {{o.price}}
+</td>
+        </tr>
+    </tbody>
+</table>

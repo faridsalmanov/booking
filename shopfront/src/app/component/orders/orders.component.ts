@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { OrderService } from 'src/app/service/order.service';
+import { OrderModel } from 'src/app/model/model';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-orders',
@@ -6,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./orders.component.css']
 })
 export class OrdersComponent implements OnInit {
+  orders:OrderModel[]=[];
 
-  constructor() { }
+  constructor(private oS:OrderService,private uS:UserService ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+this.oS.findByUsername(this.uS.username).subscribe(
+resp=>{
+this.orders=resp;
+},error=>{
+  alert('error');
+}
+);
   }
 
 }

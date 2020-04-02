@@ -15,6 +15,10 @@ saveOrder(order:OrderModel){
 
 }
 
+findByUsername(username:string){
+  return this.http.get<OrderModel[]>(`${API_URL}/orders/find-all/${username}`);
+
+}
 
 
 
