@@ -1,4 +1,4 @@
-package com.ferid.shopping.model;
+package az.developia.shopping.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

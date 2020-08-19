@@ -1,4 +1,4 @@
-package az.developia.shop.util.upload.storage;
+package az.developia.shopping.util.upload.storage;
 
 
 

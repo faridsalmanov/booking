@@ -1,4 +1,4 @@
-package com.ferid.shopping.model;
+package az.developia.shopping.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 @Entity
-@Table(name="product")
+@Table(name="book")
  
 public class Product {
 	@Id

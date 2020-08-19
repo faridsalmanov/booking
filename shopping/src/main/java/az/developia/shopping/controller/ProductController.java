@@ -1,4 +1,4 @@
-package com.ferid.shopping.controller;
+package az.developia.shopping.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ferid.shopping.dao.OrderDAO;
-import com.ferid.shopping.dao.ProductDAO;
-import com.ferid.shopping.model.OrderModel;
-import com.ferid.shopping.model.Product;
+import az.developia.shopping.dao.OrderDAO;
+import az.developia.shopping.dao.ProductDAO;
+import az.developia.shopping.model.OrderModel;
+import az.developia.shopping.model.Product;
 
 @RestController
 @RequestMapping(path="/products")

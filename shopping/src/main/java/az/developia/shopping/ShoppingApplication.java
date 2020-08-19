@@ -1,4 +1,4 @@
-package com.ferid.shopping;
+package az.developia.shopping;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
-import az.developia.shop.util.upload.storage.StorageProperties;
-import az.developia.shop.util.upload.storage.StorageService;
+import az.developia.shopping.util.upload.storage.StorageProperties;
+import az.developia.shopping.util.upload.storage.StorageService;
 
 @SpringBootApplication
 @EnableConfigurationProperties(StorageProperties.class)

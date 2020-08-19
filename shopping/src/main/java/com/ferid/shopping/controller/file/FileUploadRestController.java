@@ -11,9 +11,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.ferid.shopping.model.ImageBean;
-
-import az.developia.shop.util.upload.storage.StorageService;
+import az.developia.shopping.model.ImageBean;
+import az.developia.shopping.util.upload.storage.StorageService;
 
 
 @RestController

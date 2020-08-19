@@ -1,4 +1,4 @@
- package com.ferid.shopping.model;
+ package az.developia.shopping.model;
 
 import java.util.List;
 
@@ -29,7 +29,7 @@ public class OrderModel {
 	private Integer id;
 	private String note;
 	private Double price;
-	private String userId;
+	private String userId;private String username;
 	
 	@ManyToOne(cascade={CascadeType.PERSIST})
 @JsonIgnoreProperties("orders")	

@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import az.developia.shop.util.upload.storage.StorageFileNotFoundException;
-import az.developia.shop.util.upload.storage.StorageService;
+import az.developia.shopping.util.upload.storage.StorageFileNotFoundException;
+import az.developia.shopping.util.upload.storage.StorageService;
 
 @RestController
 @RequestMapping(FileDownloadRestController.BASE_URL)

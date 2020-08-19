@@ -1,4 +1,4 @@
-package com.ferid.shopping.dao;
+package az.developia.shopping.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.ferid.shopping.model.User;
+import az.developia.shopping.model.User;
 
 @Component
 public class UserDAO {

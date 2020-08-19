@@ -1,4 +1,4 @@
-package az.developia.shop.util.upload.storage;
+package az.developia.shopping.util.upload.storage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;

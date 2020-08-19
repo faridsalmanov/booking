@@ -1,4 +1,4 @@
-package com.ferid.shopping.model;
+package az.developia.shopping.model;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
