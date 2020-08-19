@@ -10,5 +10,5 @@ import com.ferid.shopping.model.Product;
 
 
 public interface OrderDAO extends JpaRepository<OrderModel, Integer>{
-	public List<Product> findAllByUsername(String username);
+	public List<OrderModel> findAllByUsername(String username);
 }
